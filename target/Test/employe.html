@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eagle Event Planning</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+  </head>
+  <body>
+  <header>
+    <div class="row">
+      <div class="col-sm-12 menu">
+
+      <nav class="navbar col-sm-12 navbar-default">
+      <h4 class="navbar-brand">Eagle Event Planning</h4>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav nav-pills">
+            <li><a href="home.html">Dashbord</a></li>
+            <li class="active"><a href="employe.html">Employees</a></li>
+            <li><a href="customer.html">Customer</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="tab-content">
+      
+      <div id="employe" class="login-form tab-pane fade in active">
+      	<div class="row">
+      		<button type="button" class="btn btn-info addEmploye pull-right">Add Employee</button>
+        </div>
+        <div class="table-responsive empDetails">          
+          <table class="table" id="employees">
+            <thead>
+              <tr>
+                <th>S.NO.</th>
+                <th>Username</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Role</th>
+                <th>More</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="addemp"  style="display:none;">
+        	<div class="form-group col-xs-12">
+	            <label class="control-label" for="username">Username:</label>
+	            <div class="">
+	              <input type="text" class="form-control Empusername" placeholder="Enter Username" name="username" >
+	            </div>
+	          </div>
+	          <div class="form-group col-xs-12">
+	            <label class="control-label" for="firstname">First Name:</label>
+	            <div class="">
+	              <input type="text" class="form-control Empfirstname" placeholder="Enter First Name" name="firstname">
+	            </div>
+	          </div>
+	          <div class="form-group col-xs-12">
+	            <label class="control-label" for="password">Last Name:</label>
+	            <div class="">
+	              <input type="text" class="form-control Emplastname" placeholder="Enter Last Name" name="password">
+	            </div>
+	          </div>
+	          <div class="form-group col-xs-12">
+	            <label class="control-label" for="role">Password:</label>
+	            <div class="">
+	              <input type="text" class="form-control Emppassword" placeholder="Enter Password" name="role">
+	            </div>
+	          </div>
+	          <input type="hidden" value="" class="Empid">
+	          <div class="form-group col-xs-12">        
+	            <div class="">
+	              <button type="button" class="btn btn-info backEmp">Back</button>
+	              <button type="button" class="btn btn-info AddEmp"  style="display:none;">Add Employee</button>
+	              <button type="button" class="btn btn-info updateEmp"  style="display:none;">Update Employee</button>
+	            </div>
+	          </div>
+        </div>
+        <div class="passEmp"  style="display:none;">
+        	  <div class="form-group col-xs-12">
+	            <label class="control-label" for="role">Username:</label>
+	            <div class="">
+	              <input type="text" class="form-control usrnewEmppass" placeholder="Enter New Password" name="role" readonly>
+	            </div>
+	          </div>
+        	  <div class="form-group col-xs-12">
+	            <label class="control-label" for="role">Password:</label>
+	            <div class="">
+	              <input type="password" class="form-control newEmppass" placeholder="Enter New Password" name="role">
+	            </div>
+	          </div>
+	          <div class="form-group col-xs-12">
+	            <label class="control-label" for="role">Confirm Password:</label>
+	            <div class="">
+	              <input type="password" class="form-control conEmppass" placeholder="Confirm Password" name="role">
+	            </div>
+	          </div>
+	          <input type="hidden" value="" class="restEmpid">
+	          <div class="form-group col-xs-12">        
+	            <div class="">
+	              <button type="button" class="btn btn-info backEmp">Back</button>
+	              <button type="button" class="btn btn-info restEmp">Reset Employee</button>
+	            </div>
+	          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="row">
+      <div class="col-xs-12 CopyRight">
+        <span class="col-sm-12 col-xs-12">CopyRight © 2017 Event Management</span>
+      </div>
+    </div>
+  </footer>
+  </body>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/employe.js"></script>
+</html>

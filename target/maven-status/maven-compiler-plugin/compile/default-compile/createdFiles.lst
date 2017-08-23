@@ -1,0 +1,15 @@
+Genetics\Test.class
+RestApiManagers\SessionManager.class
+Models\EventGuests.class
+RestApiManagers\CustomerManager.class
+Genetics\Constraints.class
+Genetics\Solution.class
+RestApiManagers\EmployeeManager.class
+Models\Employee.class
+RestApiManagers\EventManager.class
+Models\Result.class
+Models\Customer.class
+Models\EventRules.class
+Genetics\ParentGeneration.class
+Models\Event.class
+Genetics\Table.class

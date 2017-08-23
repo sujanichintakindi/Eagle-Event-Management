@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eagle Event Planning</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+  </head>
+  <body>
+  <header>
+    <div class="row">
+      <div class="col-sm-12 menu">
+
+      <nav class="navbar col-sm-12 navbar-default">
+      <h4 class="navbar-brand">Eagle Event Planning</h4>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav nav-pills">
+            <li><a href="home.html">Dashbord</a></li>
+            <li><a href="employe.html">Employees</a></li>
+            <li  class="active"><a href="customer.html">Customer</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="tab-content">
+      <div id="customer" class="login-form tab-pane fade in active">
+      	<div class="row">
+      		<button type="button" class="btn btn-info addCustomer pull-right">Add Customer</button>
+        </div>
+        <div class="table-responsive CusTab">          
+          <table class="table" id="customers">
+            <thead>
+              <tr>
+                <th>S.NO.</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>More</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="cusUpdate"  style="display:none;">
+        	  <div class="form-group col-xs-12">
+	            <label class="control-label" for="firstname">Name:</label>
+	            <div class="">
+	              <input type="text" class="form-control cusName" placeholder="Enter Name" name="firstname">
+	            </div>
+	          </div>
+	          <div class="form-group col-xs-12">
+	            <label class="control-label" for="password">Phone:</label>
+	            <div class="">
+	              <input type="text" class="form-control cusPhn" placeholder="Enter phone" name="password">
+	            </div>
+	          </div>
+	          <div class="form-group col-xs-12">
+	            <label class="control-label" for="role">Email:</label>
+	            <div class="">
+	              <input type="text" class="form-control cusEmail" placeholder="Enter Email" name="role">
+	            </div>
+	          </div>
+	          <input type="hidden" value="" class="cusid">
+	          <div class="form-group col-xs-12">        
+	            <div class="">
+	              <button type="button" class="btn btn-info backCus">Back</button>
+	              <button type="button" class="btn btn-info addCus" style="display:none;">Add Customer</button>
+	              <button type="button" class="btn btn-info UpdateCus" style="display:none;">Update Customer</button>
+	            </div>
+	          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="row">
+      <div class="col-xs-12 CopyRight">
+        <span class="col-sm-12 col-xs-12">CopyRight © 2017 Event Management</span>
+      </div>
+    </div>
+  </footer>
+  </body>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/customer.js"></script>
+</html>
