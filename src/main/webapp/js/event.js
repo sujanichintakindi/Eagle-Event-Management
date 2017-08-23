@@ -187,14 +187,14 @@ $(document).on('click','.generateOutput',function(e){
 	$.ajax({
 	    type: 'POST',
 	    url: 'EEM/EventManagement/GetResult',
-	    data: {eventId:$('.eventId').val()},
+	    data: {eventId:$(this).parent().find('.eventId').val()},
 	    success: function (data) {
 	        json_to_csv(data, "Seating Plan Report", "Event Report");
 	     } 
 	  });
 });
 
-//csv generation codef
+//csv generation code
 function json_to_csv(json_data, title, label) {
     var result = jQuery.parseJSON(json_data);
     var csv = '';     

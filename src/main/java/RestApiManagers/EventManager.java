@@ -56,6 +56,7 @@ public class EventManager extends Application {
 		responseBuilder.header("Content-Disposition", "attachment; filename=\"EventRules.csv\"");
 		return responseBuilder.build();
 	}
+	//this endpoint accepts files in input
 	@SuppressWarnings("resource")
 	@POST
 	@Path("/AddEvent")

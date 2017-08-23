@@ -50,6 +50,7 @@ public class ParentGeneration {
 		}
 		entitymanager.close();
 		emfactory.close();
+		//[ [] , [] ,[] , [] ]
 		for(int i=1; i <= constraints.getSameTable().size(); i++){
 			Solution solution = generateParent(constraints, i, event.getnSeats());
 			if(solution.getScore() > bestSolution.getScore()) {
@@ -74,7 +75,13 @@ public class ParentGeneration {
 		//T1 - [7,...10,1,2. ]  [3,4]  , [5,6]
 		while (guests.size() != 0) {
 			int currentGuest = guests.get(0);
-			List<Integer> sameTable = new ArrayList<Integer>(constraints.getSameTable().get(currentGuest-1));
+			List<Integer> sameTable2 = new ArrayList<Integer>(constraints.getSameTable().get(currentGuest-1));
+			List<Integer> sameTable = new ArrayList<Integer>();
+			for(Integer n : sameTable2) {
+				if(guests.contains(n)) {
+					sameTable.add(n);
+				}
+			}
 			sameTable.add(currentGuest);
 			for (int i = 0; i < constraints.getSameTable().size(); i++) {
 				if (i != currentGuest - 1) {
