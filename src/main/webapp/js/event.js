@@ -44,7 +44,7 @@ $.ajax({
 				 			for (var i = 0; i < Object.keys(data).length; i++) {
 				 				for(var j = 0; j < Object.keys(customerData).length; j++){
 				 					if(customerData[j].customerId==data[i].customerId){
-				 						$('#customers tbody').append('<tr><td>'+(i+1)+'</td><td>'+data[i].eventName+'</td><td>'+customerData[j].name+'</td><td>'+data[i].eventSchedule+'</td><td>'+data[i].tableSize+'</td><td>'+data[i].venue+'</td><td><a href="javascript:void(0)" class="btn generateOutput">Reports</a><input type="hidden" class="eventId" value="'+data[i].eventId+'" download><form action="EEM/EventManagement/FileDownload" method="GET" id="formRule"> <input type="hidden" value="'+data[i].fileLocation+'" name="filePath" class="btn rulesLink"><input type="submit" value="Uploaded File" class="btn downloadRules"></form> <button type="button" class="btn deleteEvent">Delete</button></td></tr>');
+				 						$('#customers tbody').append('<tr><td>'+(i+1)+'</td><td>'+data[i].eventName+'</td><td>'+customerData[j].name+'</td><td>'+data[i].eventSchedule+'</td><td>'+data[i].tableSize+'</td><td>'+data[i].venue+'</td><td><a href="javascript:void(0)" class="btn generateOutput">Reports/PlaceCards</a><input type="hidden" class="eventId" value="'+data[i].eventId+'" download><form action="EEM/EventManagement/FileDownload" method="GET" id="formRule"> <input type="hidden" value="'+data[i].fileLocation+'" name="filePath" class="btn rulesLink"><input type="submit" value="Uploaded File" class="btn downloadRules"></form> <button type="button" class="btn deleteEvent">Delete</button></td></tr>');
 				 					}				 					
 				 				}				 				
 				 			}
@@ -194,7 +194,7 @@ $(document).on('click','.generateOutput',function(e){
 	  });
 });
 
-//csv generation code
+//csv generation codef
 function json_to_csv(json_data, title, label) {
     var result = jQuery.parseJSON(json_data);
     var csv = '';     
