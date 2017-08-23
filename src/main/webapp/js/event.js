@@ -194,6 +194,7 @@ $(document).on('click','.generateOutput',function(e){
 	  });
 });
 
+//csv generation code
 function json_to_csv(json_data, title, label) {
     var result = jQuery.parseJSON(json_data);
     var csv = '';     
